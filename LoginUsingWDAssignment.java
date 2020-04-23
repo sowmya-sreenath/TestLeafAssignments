@@ -31,9 +31,9 @@ public static void main(String[] args) {
 		driver.findElementByLinkText("Create Lead").click();
 		
 		// Enter the mandatory fields
-		driver.findElementById("createLeadForm_companyName").sendKeys("Ciber");
-		driver.findElementById("createLeadForm_firstName").sendKeys("Akila");
-		driver.findElementById("createLeadForm_lastName").sendKeys("Murali");
+		driver.findElementById("createLeadForm_companyName").sendKeys("CMIT");
+		driver.findElementById("createLeadForm_firstName").sendKeys("Sowmya");
+		driver.findElementById("createLeadForm_lastName").sendKeys("Sreenath");
 		
 		// Click on submit
 		driver.findElementByName("submitButton").click();
