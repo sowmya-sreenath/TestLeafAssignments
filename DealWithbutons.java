@@ -10,17 +10,27 @@ public class DealWithbutons {
 				//open the chrome browser
 				//chromeDriver (C) by Se test
 				ChromeDriver driver = new ChromeDriver();
+				// Open the URL
+				driver.get("http://leaftaps.com/opentaps/control/main");
 				
-				//Find login bg color
+				// Implicit wait for 10 seconds
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				
+				//Background color of LeafTaps Login
+				String color = driver.findElementByTagName("h2").getCssValue("background-color");
+				System.out.println(color);
 				
-				//find the font size of the username
+				// Font size of username
+				String size = driver.findElementByXPath("//label[@for='username']").getCssValue("font-size");
+				System.out.println(size);
 				
-				//find the width of the login button
+				// Width of Login button
+				int width = driver.findElementByClassName("decorativeSubmit").getSize().getWidth();
+				System.out.println(width);
 				
-				
-				//find the x position of the username textbox
-				
+				// X position of Username textbox
+				int x = driver.findElementById("username").getLocation().getX();
+				System.out.println(x);
 				
 	}
 
